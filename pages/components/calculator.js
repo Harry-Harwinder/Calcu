@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styles from '../../styles/Home.module.css'
 import * as math from "mathjs";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cc84768586e396c9fb1416f0d383b128f607b7cc
 function Calculator() {
 
 
@@ -61,7 +65,11 @@ function Calculator() {
                 sinh: mode === "rad" ? Math.sinh : math.sinh,
                 cosh: mode === "rad" ? Math.cosh : math.cosh,
                 tanh: mode === "rad" ? Math.tanh : math.tanh,
+<<<<<<< HEAD
                 
+=======
+
+>>>>>>> cc84768586e396c9fb1416f0d383b128f607b7cc
             };
 
             const result = math.evaluate(expression, allVariables);
@@ -89,6 +97,7 @@ function Calculator() {
         setMode(mode === "rad" ? "deg" : "rad");
     }
 
+<<<<<<< HEAD
     return (
         <><div className={styles.App}>
             <div className={styles.calcbody}>
@@ -181,3 +190,106 @@ function Calculator() {
 }
 
 export default Calculator;
+=======
+    return ( <
+        > < div className = { styles.App } >
+        <
+        div className = { styles.calcbody } >
+        <
+        div className = { styles.inputsection } >
+        <
+        input className = { styles.screen }
+        type = "text"
+        value = { expression }
+        onChange = { handleChange }
+        /> <
+        div className = { styles.output } > Output: { screenVal } < /div> <
+        /div> <
+        div className = { styles.buttonsection } >
+
+        <
+        div className = { styles.operators } > {
+            [
+                "(",
+                ")",
+                "mc",
+                "m+",
+                "m-",
+                "mr",
+                "AC",
+                "+/-",
+                "%",
+                "÷",
+                "2nd",
+                "x²",
+                "x³",
+                "xy",
+                "ex",
+                "10x",
+                "7",
+                "8",
+                "9",
+                "x",
+                "1/x",
+                "2rtx",
+                "3rtx",
+                "yrtx",
+                "ln",
+                "log10",
+                "4",
+                "5",
+                "6",
+                "-",
+                "x!",
+                "sin",
+                "cos",
+                "tan",
+                "e",
+                "EE",
+                "1",
+                "2",
+                "3",
+                "+",
+                "Rad",
+                "sinh",
+                "cosh",
+                "tanh",
+                "Rand",
+                "0",
+                ".",
+                "=",
+                "DEL"
+
+            ].map((input) => ( <
+                button className = { `${styles.buttontext} ${['+', '-', 'x', '/', '^'].includes(input) ? styles.specialButton : ''}
+                            ${['AC', '+/-', '%', '/', 'DEL'].includes(input) ? styles.specialButtonAC : ''}` }
+                key = { input }
+                onClick = {
+                    () => handleClick(input) } >
+                { input } <
+                /button>
+            ))
+        }
+
+
+
+        <
+        button className = { styles.buttontext }
+        onClick = {
+            () => handleClick("pi") } > Pi < /button>
+
+        <
+        /div>
+
+
+
+        <
+        /div> <
+        /div> <
+        div className = { styles.variables } > < /div> <
+        /div></ >
+    );
+}
+
+export default Calculator;
+>>>>>>> cc84768586e396c9fb1416f0d383b128f607b7cc
